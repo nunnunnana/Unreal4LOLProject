@@ -31,14 +31,17 @@
 
 - 스페이스바를 누르면 구체 주위에 있는 액터들이 구체로 모임
 - 스페이스바를 한번 더 누르면 모였던 액터가 구체 주위로 펴짐
-- 구체가 주위 액터들을 모은 상태에서 구체가 이동하면 자동으로 모았던 액터를 
+- 구체가 주위 액터들을 모은 상태에서 구체가 이동하면 자동으로 모았던 액터를 펼침
 
-
+![오리아나 궁극기](https://github.com/nunnunnana/Unreal4LOLProject/assets/99165741/5b7ce62a-9adb-4aa7-9c5e-b49d6a9d7a88)
 
 - 블루프린트 코드
 
-Quiz_0_Cube_Actor
->https://blueprintue.com/blueprint/sekq4uq0/
+Quiz_Oriana_Sphere_Actor
+>
+
+Quiz_Oriana_PawnQuiz_Oriana_Pawn
+>
 
 - <개발>
   - quiz_actor에 큐브가 이동할 Scene Component 4개를 배치
