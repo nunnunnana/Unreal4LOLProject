@@ -58,20 +58,38 @@ Quiz_Oriana_PawnQuiz_Oriana_Pawn
 
 ***
 ## 2. 제드
-- Quiz_0
-  - 지정된 위치에 큐브가 도착하면 자동으로 다음 위치로 이동
 
-![Quiz_0](https://github.com/nunnunnana/Unreal4_Project/assets/99165741/0f74f14b-7bdb-4a96-a2ee-7a7cc4fe11d2)
+### 주요 기능
+
+>기본 이동 및 공격
+
+- W, A, S, D로 움직이고 마우스로 회전
+- 마우스 왼쪽 클릭으로 표창 던지기
+- 키보드 E를 누르면 회전하면서 주변 사물 베기
+
+![Zed 이동 및 공격](https://github.com/nunnunnana/Unreal4LOLProject/assets/99165741/024241cc-495c-47d7-bfc3-6a1237cdd6d3)
+
+>그림자 생성
+
+- 키보드 Q를 누르면 그림자 생성
+- Q를 한 번 더 누르면 그림자와 위치 변경
+- 그림자는 5초 뒤 사라짐
+ 
+
+
+>그림자 공격
+
+- 그림자 생성 후 공격을 하면 그림자도 동일하게 공격
+
+
 
 - 블루프린트 코드
 
-Quiz_0_Cube_Actor
->https://blueprintue.com/blueprint/sekq4uq0/
+Zed_Character
+>
+
+Zed_Shadow
+>
 
 - <개발>
-  - quiz_actor에 큐브가 이동할 Scene Component 4개를 배치
-  - Scene Component Target_list에 넣고 초기 인덱스를 0으로 설정
-  - 만약 Is_Move가 True이면 Cube에 Y축을 계속 더하고 Next_Target과 Cube의 위치가 동일해지면  인덱스에 +1을 해 다음 타겟을 바꿔준다.
-  - 인덱스가 Target Lengh와 같아지면 인덱스를 0으로 설정
-  - Qube를 인덱스 n번째의 Scene Component에 Attach하고 인덱스에 +1을 해서 Next_Target을 바꿔준다.
-  - 만약 인덱스가 Target Lengh보다 커지면 인덱스를 0으로 설정
+  - 
