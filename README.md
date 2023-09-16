@@ -17,6 +17,7 @@
 
 - 마우스 왼쪽 클릭을 하면 플레이어가 바라보는 방향으로 구체 이동
 - 마우스 오른쪽 클릭을 하면 구체 돌아오기
+- 구체는 플레이어와 멀어졌을 때 플레이어를 가리키는 화살표나 표시됨
  
 ![오리아나 구체 이동](https://github.com/nunnunnana/Unreal4LOLProject/assets/99165741/fe0e1aab-e81d-4322-ada3-d08cf03cc9a8)
 
@@ -38,18 +39,20 @@
 - 블루프린트 코드
 
 Quiz_Oriana_Sphere_Actor
->
+>https://blueprintue.com/blueprint/8a-3cdog/
 
 Quiz_Oriana_PawnQuiz_Oriana_Pawn
->
+>https://blueprintue.com/blueprint/3vo2he_j/
 
 - <개발>
-  - quiz_actor에 큐브가 이동할 Scene Component 4개를 배치
-  - Scene Component Target_list에 넣고 초기 인덱스를 0으로 설정
-  - 만약 Is_Move가 True이면 Cube에 Y축을 계속 더하고 Next_Target과 Cube의 위치가 동일해지면  인덱스에 +1을 해 다음 타겟을 바꿔준다.
-  - 인덱스가 Target Lengh와 같아지면 인덱스를 0으로 설정
-  - Qube를 인덱스 n번째의 Scene Component에 Attach하고 인덱스에 +1을 해서 Next_Target을 바꿔준다.
-  - 만약 인덱스가 Target Lengh보다 커지면 인덱스를 0으로 설정
+  - Pawn에 Scene 컴포넌트를 생성하고 Sphere_Actor를 Scene 컴포넌트에 Attach 후 Scene을 계속 회전시킴
+  - 마우스 왼쪽 클릭을 누르면 Sphere_Actor를 Detach 하고 Pawn 액터의 정방향 벡터를 구해 500 만큼의 거리로 이동
+  - Pawn과 Sphere의 거리가 800 이상이면 Sphere Color를 Red로 바꾸고 거리가 1000 이상이면 Pawn에 Attach
+  - 마우스 오른쪽 클릭을 하면 Sphere_Actor의 위치에서 Pawn에 Scene 컴포넌트 위치까지 부드럽게 이동 후 Scene에 Attach
+  - Sphere_Actor에 Coliision을 생성 후 Pawn이 Overlap되면 World location을 유지하면서 Pawn에 Attach
+  - 스페이스바를 누르면 Sphere_Actor에서 Get Overlapping Actors 노드로 Collision에 Overlap 된
+  Color_Sphere_Actor_2의 Physics를 끄고 위치를 Sphere_Actor의 위치로 변경
+  - 액터가 모인 상태에서 스페이스바를 누르거나 공의 위치가 변경되면 Overlap 된 Color_Sphere_Actor_2의 Physics를 켬
 
 
 
