@@ -75,7 +75,7 @@ Quiz_Oriana_PawnQuiz_Oriana_Pawn
 - Q를 한 번 더 누르면 그림자와 위치 변경
 - 그림자는 5초 뒤 사라짐
  
-
+![제드 그림자 생성](https://github.com/nunnunnana/Unreal4LOLProject/assets/99165741/454f2c9c-500f-477b-9040-73061d0561a5)
 
 >그림자 공격
 
@@ -86,10 +86,29 @@ Quiz_Oriana_PawnQuiz_Oriana_Pawn
 - 블루프린트 코드
 
 Zed_Character
->
+>https://blueprintue.com/blueprint/21z_hnkf/
 
 Zed_Shadow
->
+>https://blueprintue.com/blueprint/5jplke-t/
+
+- 애니메이션 생성
+  - 애니메이션 키 값을 설정해 공격, 그림자 생성에 맞는 애니메이션 생성
+<img src="https://github.com/nunnunnana/Unreal4LOLProject/assets/99165741/7b4042cc-dacc-471e-9518-c549cf15941a.png" width="350" height="350"/>
+
+
 
 - <개발>
-  - 
+  - CurrentState 변수를 생성하고 애니메이션 블루프린트를 생성해 CurrentState 변수 값에 따라 선택한 애니메이션이 재생되도록 추가
+  - 마우스 왼쪽 클릭을 누르면 제드 앞에 표창을 생성하고 500만큼 표창을 날림
+  - 키보드 E를 누르면 제드에 Cube를 생성해서 제드 중심으로 Cube 회전
+  - Q를 누르면 제드 캐릭터의 정방향 벡터를 구한 뒤 그림자 액터를 생성한 후 Distance만큼 Lerp하게 그림자가 이동
+  - Q를 한번 더 누르면 Is_Shadow_On 변수를 체크해서 True이면 Shadow_Actor의 위치를 변수에 저장하고 Shadow_Actor의 위치와 Zed_Actor의 위치를 변경
+  - 마우스 왼쪽 클릭을 눌렀을 때 Is_Shadow_On가 True면 FindLookAtRotation 노드를 이용해 Zed_Actor가 바라보는 방향에서 Distance 만큼의 거리를 그림자 액터가
+  바라보도록 회전한 후 표창을 생성해 Distance만큼 표창을 날림
+ 
+
+
+
+
+
+
